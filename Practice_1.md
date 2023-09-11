@@ -8,13 +8,17 @@ $.
 
 Определить при каком значении $n$ $2n^2$ является наиболее эффективной.
 
+Ответ: log n
+ 
 ## Задание 2
 Выберете наилучшую асимптотику для $5n+3$:
 1. $O(1)$
-1. $O(n)$
-1. $O(n^2)$
-1. $O(n log n)$
-1. $O(log~n)$ 
+2. $O(n)$
+3. $O(n^2)$
+4. $O(n log n)$
+5. $O(log~n)$
+
+Ответ: 2
 
 ## Задание 3
 
@@ -25,6 +29,7 @@ sum = 0
 for i in range(0, n * n):
     sum += 1
 ```
+Ответ: O(n^2)
 
 ## Задание 4
 
@@ -39,6 +44,7 @@ def task4(values: list, size: int):
         sum += i
     return sum
 ```
+Ответ: 20+n O(n)
 
 ## Задание 5
 
@@ -53,6 +59,7 @@ def task5(values: list, size: int):
             sum += i
     return sum
 ```
+Ответ: n20 O(n)
 
 ## Задание 6
 
@@ -67,6 +74,7 @@ def task6(values: list, size: int):
             sum += i
     return sum
 ```
+Ответ: n+n^2 O(n^2)
 
 ## Задание 7
 
@@ -76,6 +84,8 @@ def task6(values: list, size: int):
 ---|---
 Сложений: $n^2+n$ | Сложений: $21n$
 Сложность: $O(n^2)$| Сложность: $O(n)$
+
+Ответ: [0 ; 19]
 
 ## Задание 8
 
@@ -94,6 +104,7 @@ def task8(values: list, size: int):
             j *= 2
     return sum
 ```
+Ответ: 1000+n^log(n)  O(n^log(n))
 
 ## Задание 9
 

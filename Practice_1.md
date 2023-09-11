@@ -8,6 +8,8 @@ $.
 
 Определить при каком значении $n$ $2n^2$ является наиболее эффективной.
 
+otvet: 2^n
+
 ## Задание 2
 Выберете наилучшую асимптотику для $5n+3$:
 1. $O(1)$
@@ -16,6 +18,7 @@ $.
 1. $O(n log n)$
 1. $O(log~n)$ 
 
+otvet: 3
 ## Задание 3
 
 Найдите ассимптотику в среднем случае для следующего фрагмента кода:
@@ -25,6 +28,7 @@ sum = 0
 for i in range(0, n * n):
     sum += 1
 ```
+otvet: n^2
 
 ## Задание 4
 
@@ -39,6 +43,7 @@ def task4(values: list, size: int):
         sum += i
     return sum
 ```
+otvet: 20+n O(n)
 
 ## Задание 5
 
@@ -53,6 +58,7 @@ def task5(values: list, size: int):
             sum += i
     return sum
 ```
+otvet: n+20n O(n)
 
 ## Задание 6
 
@@ -67,6 +73,7 @@ def task6(values: list, size: int):
             sum += i
     return sum
 ```
+otvet: n+n^2 O(n^2)
 
 ## Задание 7
 

@@ -7,6 +7,9 @@ T(n) = \begin{cases}
 \end{cases}
 $
 
+T(n) = 3T(n-1) = 3^2T(n-2) = 3^3T(n-3) = 3^n(n-n)
+Асимптотика: O(3^n)
+
 ## 2. Найти сложность приведенного ниже соотношения:  
 $
 T(n) = \begin{cases} 
@@ -15,48 +18,58 @@ T(n) = \begin{cases}
 \end{cases}
 $
 
+T(n) = 2T(n-1) - 1 = 2^2T(n-2) - 2 - 1 = 2^3T(n-3) - 4 - 2 - 1 =
+2^nT(n-n) - 2^n-1 - 2^n-2 - ... - 2^0
+Асимптотика: O(1)
+ 
 ## 3. Найти сложность приведенной ниже программы:
 
 ```python
 def funct(n):
     if (n==1):
         return
-    for i in range(1, n+1):
-        for j in range(1, n + 1):
+    for i in range(1, n+1):        # O(n)
+        for j in range(1, n + 1):  # -
             print("*", end = "")
             break
           print()
 ```
+
+Асимптотика: O(n)
 
 ## 4. Найти сложность приведенной ниже программы:
 
 ```python
 def funct(n):
     count = 0
-    for i in range(n//2, n+1):
+    for i in range(n//2, n+1):   # O(n)
         j = 1
-        while j <= n:
+        while j <= n:            # O(log n)
             j = 2 * j
             k = 1
-            while k <= n:
+            while k <= n:        # O(log n)
                 k = 2 * k
                 count += 1
 ```
+
+Асимптотика: O(n log^2 n)
 
 ## 5. Найти сложность приведенной ниже программы: 
 
 ```python
 def funct(n):
     count = 0
-    for i in range(n//2, n+1):
+    for i in range(n//2, n+1):    # O(n)
         j = 1
-        while j + n // 2 <= n:
+        while j + n // 2 <= n:    # O(n)
             j += 1
             k = 1
-            while k <= n:
+            while k <= n:         # O(log n)
                 k = 2 * k
                 count += 1
 ```
+
+Асимптотика: O(n^2 log n)
 
 ## 6. Найти сложность приведенной ниже программы: 
 
@@ -69,18 +82,23 @@ def function(n):
         s += i
         print('*')
 ```
+Si = Si-1 + i = Si-2 + (i - 1) + i = S + (i - n) + (i - n+1) + ... + i =
+= 1 + 2 + 3 + 4 + ... + n = n(n+1)/2 = O(√n)
+
 
 ## 7. Найти сложность приведенной ниже программы: 
 
 ```py
 def function(n):
     count = 0
-    for i in range(n):
-        for j in range(i, i * i):
+    for i in range(n):                # O(n)
+        for j in range(i, i * i):     # O(n^2)
             if j % i == 0:
-                for k in range(j):
+                for k in range(j):    # O(n^2)
                     print('*')
 ```
+
+Асимптотика: O(n^5)
 
 ## 8. Найти сложность приведенной ниже программы: 
 
@@ -93,6 +111,8 @@ def function(n):
         i+=1
 ```
 
+Si = Si-1 + Ii-1
+
 ## 9. Найти сложность приведенной ниже программы: 
 
 
@@ -101,9 +121,11 @@ def fun(n):
     if (n < 5):
         print("Sirius", end ="")
     else:
-        for i in range(n):
+        for i in range(n):        # O(n)
             print(i, end= " ")
 ```
+
+Асимптотика: O(n)
 
 ## 10. Найти сложность приведенной ниже программы в лучшем и в худшем случае: 
 
@@ -126,6 +148,8 @@ def fun(n):
         print("Sirius")
         i += 1
 ```
+
+Асимптотика: O(√n)
 
 ## 12. Найти сложность приведенной ниже программы: 
 

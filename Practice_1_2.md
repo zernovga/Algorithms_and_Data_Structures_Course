@@ -145,7 +145,7 @@ Answer: O(n)
 
 ```python
 def fun(a, b):
-    while (a != b): # O(n)
+    while (a != b): # O(max(a, b))
         if (a > b):
             a = a - b
         else:

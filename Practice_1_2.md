@@ -6,7 +6,7 @@ T(n) = \begin{cases}
     1, &\text{иначе} 
 \end{cases}
 $
-
+answer: O(3**n)
 ## 2. Найти сложность приведенного ниже соотношения:  
 $
 T(n) = \begin{cases} 
@@ -14,7 +14,7 @@ T(n) = \begin{cases}
     1, &\text{иначе} 
 \end{cases}
 $
-
+answer: O(1)
 ## 3. Найти сложность приведенной ниже программы:
 
 ```python
@@ -27,7 +27,7 @@ def funct(n):
             break
           print()
 ```
-
+answer: O(n)
 ## 4. Найти сложность приведенной ниже программы:
 
 ```python
@@ -42,7 +42,7 @@ def funct(n):
                 k = 2 * k
                 count += 1
 ```
-
+answer: O(n*log(n)**2)
 ## 5. Найти сложность приведенной ниже программы: 
 
 ```python
@@ -57,7 +57,7 @@ def funct(n):
                 k = 2 * k
                 count += 1
 ```
-
+answer: O(n**2*log(n))
 ## 6. Найти сложность приведенной ниже программы: 
 
 ```py
@@ -69,10 +69,10 @@ def function(n):
         s += i
         print('*')
 ```
-
+answer: O(n*log(n)), т.к это будет видно, если запустить программу
 ## 7. Найти сложность приведенной ниже программы: 
 
-```py
+```python
 def function(n):
     count = 0
     for i in range(n):
@@ -81,7 +81,7 @@ def function(n):
                 for k in range(j):
                     print('*')
 ```
-
+answer: O(n**5)
 ## 8. Найти сложность приведенной ниже программы: 
 
 ```python
@@ -92,7 +92,7 @@ def function(n):
         s = s + i
         i+=1
 ```
-
+answer: O(log(n)), т.к очень плавно растут значения
 ## 9. Найти сложность приведенной ниже программы: 
 
 
@@ -104,7 +104,7 @@ def fun(n):
         for i in range(n):
             print(i, end= " ")
 ```
-
+answer: O(n^2)
 ## 10. Найти сложность приведенной ниже программы в лучшем и в худшем случае: 
 
 
@@ -116,69 +116,69 @@ def fun(a, b):
         else:
             b = b - a
 ```             
-
+answer: max(a//2, b//2)-худший, лучший-(1)
 ## 11. Найти сложность приведенной ниже программы: 
 
-```py
+```python
 def fun(n):
     i = 0
     while i*i < n:
         print("Sirius")
         i += 1
 ```
-
+answer: O(sqrt(n))
 ## 12. Найти сложность приведенной ниже программы: 
 
-```py
+```python
 def fun(n, x):
   for i in range(1, n, i * x):
     print("Sirius")
 ```
-
+answer: O(log(x))
 ## 13. Найти сложность приведенной ниже программы: 
 
-```py
+```python
 import math
  
 def fun(n):
-    for i in range(0,math.floor(n/2)):
-        for j in range(1,n-math.floor(n/2)+1):
+    for i in range(0,math.floor(n/2)): n
+        for j in range(1,n-math.floor(n/2)+1): n
             k=1;
-            for k in range(1,n+1,2*k):
+            for k in range(1,n+1,2*k): log(n)
                  print("Sirius");
 ```
-
+answer: O(n**2*log(n))
 ## 14. Найти сложность приведенной ниже программы: 
 
 ```python
 def fun(n):
-    for i in range(1,n+1):
-        for j in range(1,n+1,i):
+    for i in range(1,n+1): n
+        for j in range(1,n+1,i): log(n)+1
             print("Sirius");
-
+answer: O(n*log(n)+1)
 ```
 
 ## 15. Найти сложность приведенной ниже программы: 
 
 ```py
 def fun(n):
-    for i in range(n//3 + 1):
-        for j in range(1, n+1, 4):
+    for i in range(n//3 + 1): n
+        for j in range(1, n+1, 4): n
             print("Sirius")
 ```             
-
+answer: O(n**2)
 ## 16. Найти сложность приведенной ниже программы:  
 
 ```py
 def fun(n):
     i = 1
-    while (i < n):
+    while (i < n): log(n)
         j = n
-        while (j > 0):
+        while (j > 0): log(n)
             j = j // 2
         i = i * 2
 ```
-
+answer: log(n)**2
 ## 17. Найти какое число сравнений будет сделано при выполнении следующего фрагмента кода?  
 ```py
 def fun(n):
@@ -186,7 +186,7 @@ def fun(n):
     while (j <= n):
         j = j * 2
 ```
-
+answer: O(log(n))
 ## 18. Найти сложность приведенной ниже программы: 
  
 ```py
@@ -198,7 +198,7 @@ for i in range(N):
 for i in range(M):
     b = b + random()
  ```
-
+answer: O(N+M)
 ## 19. Найти сложность приведенной ниже программы: 
  
 ```py
@@ -207,16 +207,16 @@ for i in range(N):
     for j in reversed(range(i,N)):
         a = a + i + j;
  ```
-
+answer: O(N**2)
 ## 20. Найти сложность приведенной ниже программы: 
  
 ```py
 k = 0;
-for i in range(n//2,n):
+for i in range(n//2,n): 
     for j in range(2,n,pow(2,j)):
         k = k + n / 2;
  ```
-
+answer: O(log(n))
 ## 21. Найти сложность приведенной ниже программы: 
 ```py
 a = 0
@@ -225,14 +225,14 @@ while (i > 0):
     a += i
     i //= 2
 ``` 
-
+answer: O(log(n))
 ## 22. Найти сложность приведенной ниже программы: 
 
 ```py
 for i in range(n):
     i = i * k
 ```
-
+answer: O(n)
 ## 23. Найти сложность приведенной ниже программы: 
 
 ```py
@@ -241,3 +241,4 @@ for i in range(n):
     for j in range(i):
         value = value + 1
 ```
+answer: answer: O(n**2)

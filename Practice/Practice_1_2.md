@@ -262,4 +262,4 @@ for i in range(n): -> n
     for j in range(i):
         value = value + 1
 ```
-Answer: O(n^2).
+Answer: O(n^2)

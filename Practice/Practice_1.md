@@ -8,13 +8,19 @@ $.
 
 Определить при каком значении $n$ ассимптотика $2n^2$ является наиболее эффективной.
 
+$O(2n^2) = O(n^2)$ \
+Ответ: Не при каком.
+
 ## Задание 2
 Выберете наилучшую асимптотику для $5n+3$:
 1. $O(1)$
 1. $O(n)$
 1. $O(n^2)$
 1. $O(n~log~n)$
-1. $O(log~n)$ 
+1. $O(log~n)$
+
+$O(5n + 3) = O(5n) = O(n)$ \
+Ответ: $O(n)$
 
 ## Задание 3
 
@@ -22,9 +28,11 @@ $.
 
 ```python
 sum = 0
-for i in range(0, n * n):
+for i in range(0, n * n): # O(n^2)
     sum += 1
 ```
+
+Ответ: $O(n^2)$
 
 ## Задание 4
 
@@ -33,12 +41,15 @@ for i in range(0, n * n):
 ```python
 def task4(values: list, size: int):
     sum = 0
-    for i in range(0, size):
+    for i in range(0, size): # O(size)
         sum += values[i]
-    for i in range(0, 20):
+    for i in range(0, 20): # O(20)
         sum += i
     return sum
 ```
+
+$O(size) + O(20) = O(size)$ \
+Ответ: $size + 20$ - колличество операций суммирования, $O(size)$ - асимптотика.
 
 ## Задание 5
 
@@ -47,12 +58,15 @@ def task4(values: list, size: int):
 ```python
 def task5(values: list, size: int):
     sum = 0
-    for i in range(0, size):
+    for i in range(0, size): # O(size)
         sum += values[i]
-        for j in range(0, 20):
+        for j in range(0, 20): #(20 * size)
             sum += i
     return sum
 ```
+
+$O(20 * size) = O(size)$ \
+Ответ: $size + 20 * size = 21 * size$ - колличество операций суммирования, $O(size)$ - асимптотика.
 
 ## Задание 6
 
@@ -61,12 +75,14 @@ def task5(values: list, size: int):
 ```python
 def task6(values: list, size: int):
     sum = 0
-    for i in range(0, size):
+    for i in range(0, size): # O(size)
         sum += values[i]
-        for j in range(0, size):
+        for j in range(0, size): # O(size^2)
             sum += i
     return sum
 ```
+
+Ответ: $size + size^2$ - колличество операций суммирования, $O(size^2)$ - асимптотика.
 
 ## Задание 7
 
@@ -77,6 +93,11 @@ def task6(values: list, size: int):
 Сложений: $n^2+n$ | Сложений: $21n$
 Сложность: $O(n^2)$| Сложность: $O(n)$
 
+$n^2 + n < 21n$ \
+$n^2 < 20n$ \
+$n < 20$ \
+Ответ: $0 < n < 20$
+
 ## Задание 8
 
 Определите количество операций суммирования и асимптотику.
@@ -85,18 +106,28 @@ def task6(values: list, size: int):
 def task8(values: list, size: int):
     sum = 0
     j = 0
-    for i in range(0, 1000):
+    for i in range(0, 1000): # O(1000)
         sum += i
-    for i in range(0, size):
+    for i in range(0, size): # O(size)
         j = 1
-        while j <= size:
+        while j <= size: # O(size * log_2{size})
             sum += values[j-1]
             j *= 2
     return sum
 ```
+
+$O(1000) + O(size * log_2{size}) = O(size * log_2{size})$ \
+Ответ: $1000 + size + size * log_2{size}$ - колличество операций суммирования, $O(size * log_2{size})$ - асимптотика.
 
 ## Задание 9
 
 Напишите алгоритм поиска максимального элемента в массиве. Для это алгоритма проверьте его свойства и найдите ассимптотику. 
 
 Для написания алгоритма используйте естественный язык, не язык программирования!
+
+Дана таблица записей $R1, R2, …, R_n$, для которых соответствуют ключи: $K_1, K_2, ..., K_n$; алгоритм используется для поиска максимального элемента в таблице. \
+1 - Установить $i \leftarrow 1$, $max \leftarrow K_i$, где $K_i = K_1$, соответственно. \
+2 - Если $i < n$, перейти к шагу 3; если $i \geq n$, алгоритм успешно завершается, $max$ - искомое значение. \
+3 - Если $max < K_i$, перейти к шагу 4; если $max \geq K_i$, перейти к шагу 5. \
+4 - Установить $max \leftarrow K_i$. \
+5 - Установить $i \leftarrow i + 1$ и перейти к шагу 2.
